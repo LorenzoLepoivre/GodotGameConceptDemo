@@ -20,7 +20,7 @@ Dark And Light Dungeon is a puzzle game with a horror atmosphere developed using
 
 ## Product Video
 
-https://github.com/user-attachments/assets/a81b98b2-1ff1-4b99-af1d-17c869638768
+https://github.com/LorenzoLepoivre/GodotGameConceptDemo/issues/1#issue-2430998878
 
 ##
 
