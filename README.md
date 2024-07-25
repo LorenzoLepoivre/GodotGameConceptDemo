@@ -18,6 +18,10 @@ Dark And Light Dungeon is a puzzle game with a horror atmosphere developed using
 1. **Download the Project**: Clone or download the project repository from GitHub.
 2. **Run the Game**: Navigate to the `export` folder and launch the game by double-clicking the `.exe` file.
 
+## Product Video
+
+https://github.com/user-attachments/assets/a81b98b2-1ff1-4b99-af1d-17c869638768
+
 ##
 
 ## Development
