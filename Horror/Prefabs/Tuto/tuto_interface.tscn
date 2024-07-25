@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm4io7ko28itl"]
+
+[ext_resource type="Script" path="res://Scripts/Tuto/tuto_interface.gd" id="1_h80sh"]
+
+[node name="TutoInterface" type="Control"]
+z_index = 50
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h80sh")
+
+[node name="dep" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 4096
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.396078)
+
+[node name="text_area" type="RichTextLabel" parent="ColorRect"]
+unique_name_in_owner = true
+z_index = 20
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+text = "fffffffffffff"
+
+[node name="final" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="dep" to="." method="_on_dep_timeout"]
+[connection signal="timeout" from="final" to="." method="_on_final_timeout"]

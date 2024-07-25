@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2bloln4oo2sa"]
+
+[ext_resource type="Script" path="res://Scripts/Object/note.gd" id="1_xwt7q"]
+[ext_resource type="Texture2D" uid="uid://c5nk5nadrwhqj" path="res://Assets/Graphics/Tiles/TilesProps.png" id="3_ue47f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhklu"]
+size = Vector2(30, 23.3333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqg5e"]
+atlas = ExtResource("3_ue47f")
+region = Rect2(160, 80, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jdrw2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqg5e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Note" type="Control"]
+z_index = 50
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_xwt7q")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.66667, -1.66667)
+shape = SubResource("RectangleShape2D_yhklu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jdrw2")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

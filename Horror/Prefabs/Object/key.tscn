@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfl5tqkvlqnja"]
+
+[ext_resource type="Script" path="res://Scripts/Object/key.gd" id="1_28al7"]
+[ext_resource type="Texture2D" uid="uid://gikk4bptj7qj" path="res://Assets/Graphics/Object_tiles/key.png" id="1_d2ut4"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_maook"]
+light_mode = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uy1lw"]
+size = Vector2(20, 22.5)
+
+[node name="Key" type="Area2D"]
+material = SubResource("CanvasItemMaterial_maook")
+scale = Vector2(0.4, 0.4)
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_28al7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+use_parent_material = true
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_d2ut4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.25001)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_uy1lw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

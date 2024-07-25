@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://jf3ypexic37d"]
+
+[ext_resource type="Script" path="res://Scripts/Object/heal.gd" id="1_4a0ae"]
+[ext_resource type="Texture2D" uid="uid://c5nk5nadrwhqj" path="res://Assets/Graphics/Tiles/TilesProps.png" id="2_b4tgi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nan1s"]
+atlas = ExtResource("2_b4tgi")
+region = Rect2(96, 234, 16, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dqxe3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nan1s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xq2w4"]
+size = Vector2(14, 16)
+
+[node name="Battery" type="Area2D"]
+scale = Vector2(0.5, 0.5)
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_4a0ae")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+use_parent_material = true
+sprite_frames = SubResource("SpriteFrames_dqxe3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_xq2w4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

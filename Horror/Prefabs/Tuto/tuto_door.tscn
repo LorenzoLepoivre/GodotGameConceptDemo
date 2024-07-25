@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://b00rupoolkr5i"]
+
+[ext_resource type="Texture2D" uid="uid://ct6ouirpmesg" path="res://Assets/Graphics/Tiles/TilesGround.png" id="2_wvrtk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkem7"]
+atlas = ExtResource("2_wvrtk")
+region = Rect2(144, 57, 16, 57)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8hlu0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkem7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71ifc"]
+size = Vector2(225, 42)
+
+[node name="tutoDoor" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.50001, 12.5)
+scale = Vector2(16.0625, 2.92982)
+sprite_frames = SubResource("SpriteFrames_8hlu0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -39)
+shape = SubResource("RectangleShape2D_71ifc")

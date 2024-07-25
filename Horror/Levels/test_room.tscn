@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciuqp78q6weuk"]
+
+[ext_resource type="PackedScene" uid="uid://dtrofxrbjs1co" path="res://Levels/LevelTemplate.tscn" id="1_lkt7y"]
+[ext_resource type="PackedScene" uid="uid://cg8mnqtxhq8av" path="res://Prefabs/Ennemy/dog.tscn" id="2_27hy5"]
+
+[node name="World" instance=ExtResource("1_lkt7y")]
+
+[node name="CanvasModulate" parent="." index="2"]
+visible = false
+
+[node name="Dog" parent="." index="8" instance=ExtResource("2_27hy5")]
+position = Vector2(412, 231)

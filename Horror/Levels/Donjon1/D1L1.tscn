@@ -1,0 +1,111 @@
+[gd_scene load_steps=11 format=3 uid="uid://bog0rpshlrhyl"]
+
+[ext_resource type="PackedScene" uid="uid://dtrofxrbjs1co" path="res://Levels/LevelTemplate.tscn" id="1_cionf"]
+[ext_resource type="Script" path="res://Scripts/Levels/D1L1.gd" id="2_3c57p"]
+[ext_resource type="PackedScene" uid="uid://bm4io7ko28itl" path="res://Prefabs/Tuto/tuto_interface.tscn" id="2_uxyax"]
+[ext_resource type="PackedScene" uid="uid://cxp6btao2do4h" path="res://Prefabs/Ennemy/orc.tscn" id="4_th4di"]
+[ext_resource type="PackedScene" uid="uid://c1job6f30heox" path="res://Prefabs/Object/battery.tscn" id="4_xar7e"]
+[ext_resource type="PackedScene" uid="uid://b00rupoolkr5i" path="res://Prefabs/Tuto/tuto_door.tscn" id="6_wtmad"]
+[ext_resource type="PackedScene" uid="uid://cg8mnqtxhq8av" path="res://Prefabs/Ennemy/dog.tscn" id="7_d5o3i"]
+[ext_resource type="PackedScene" uid="uid://d2bloln4oo2sa" path="res://Prefabs/Object/note.tscn" id="7_sw66j"]
+[ext_resource type="PackedScene" uid="uid://cmq8rolsrfnvg" path="res://Prefabs/Interface/note_interface.tscn" id="7_t0ap0"]
+[ext_resource type="PackedScene" uid="uid://jf3ypexic37d" path="res://Prefabs/Object/heal.tscn" id="10_fypjh"]
+
+[node name="World" instance=ExtResource("1_cionf")]
+script = ExtResource("2_3c57p")
+
+[node name="TileMap" parent="." index="0"]
+layer_1/tile_data = PackedInt32Array(1048576, 1114113, 4, 1179648, 1114113, 4, 1245184, 1114113, 4, 1310720, 1114113, 4, 1376256, 1114113, 4, 1441792, 1114113, 4, 1507328, 1114113, 4, 917504, 1114113, 4, 983040, 1114113, 4, 851968, 1114113, 4, 786432, 1114113, 4, 720896, 1114113, 4, 655360, 1114113, 4, 589824, 1114113, 4, 524288, 1114113, 4, 196608, 1114113, 4, 1572864, 327681, 3, 1572866, 327681, 3, 1572868, 327681, 3, 262144, 1114113, 4, 393216, 1114113, 4, 458752, 1114113, 4, 131072, 1114113, 4, 327680, 1114113, 4, -131069, 327681, 7, 65536, 1114113, 4, 0, 1114113, 4, -131065, 327681, 7, -131061, 327681, 7, -131057, 327681, 7, -131053, 327681, 7, -131049, 327681, 7, -131045, 327681, 7, -131041, 327681, 7, 262185, 327681, 7, 262189, 327681, 7, 262193, 327681, 7, 262197, 327681, 7, 262201, 327681, 7, 1572870, 327681, 3, 1572872, 327681, 3, 1572874, 327681, 3, 1572876, 327681, 3, 1572878, 327681, 3, 1572880, 327681, 3, 1572882, 327681, 3, 1572884, 327681, 3, 1572886, 327681, 3, 1966106, 327681, 3, 1966108, 327681, 3, 1966110, 327681, 3, 1966112, 327681, 3, 1966114, 327681, 3, 1966116, 327681, 3, 1966118, 327681, 3, 1966120, 327681, 3, 1966122, 327681, 3, 1966124, 327681, 3, 1966126, 327681, 3, 1966128, 327681, 3, 1966130, 327681, 3, 1966132, 327681, 3, 1966134, 327681, 3, 1966136, 327681, 3, 786488, 327681, 3, 786490, 327681, 3, 786492, 327681, 3, 786494, 327681, 3, 786496, 327681, 3, 786498, 327681, 3, 786500, 327681, 3, 1572888, 327681, 3, 65571, 65537, 4, 35, 65537, 4, 720958, 65537, 4, 655422, 65537, 4, 589886, 65537, 4, 524350, 65537, 4, 458814, 65537, 4, 393278, 65537, 4, 917557, 65537, 4, 983093, 65537, 4, 1900571, 1114113, 4, 1835035, 1114113, 4, 1769499, 1114113, 4, 1638427, 1114113, 4, 1703963, 1114113, 4, 1572891, 1114113, 3, 1572889, 327681, 3, 1900597, 65537, 4, 1835061, 65537, 4, 1769525, 65537, 4, 1703989, 65537, 4, 1638453, 65537, 4, 1572917, 65537, 4, 1507381, 65537, 4, 1441845, 65537, 4, 1376309, 65537, 4, 1310773, 65537, 4, 1245237, 65537, 4, 1179701, 65537, 4, 1114165, 65537, 4, 1048629, 65537, 4, -65501, 65537, 4, 327742, 65537, 4, 262206, 65537, 4, 196670, 65537, 4, 131134, 65537, 4, 65598, 65537, 4, -131037, 65537, 4, -196573, 65537, 4, -262109, 65537, 4, -327645, 65537, 4, -131039, 327681, 7, 262204, 327681, 7, -65536, 1114113, 4, -131072, 1114113, 4, -196608, 1114113, 4, -262144, 1114113, 4, -131070, 327681, 7, 131107, 65537, 4, 262182, 327681, 7, 262181, 327681, 7, 786485, 65537, 3, 786487, 327681, 3, 852021, 65537, 4, 524289, 1114113, 17, 524292, 1114113, 17, 524295, 1114113, 17, 524298, 1114113, 17, 524300, 2424833, 2, 524304, 2490369, 2, 524306, 1507329, 17, 524309, 1114113, 17, 524311, 2424833, 2, 327703, 1769473, 9, 262167, 1769473, 9, 196631, 1769473, 9, 131095, 1769473, 9, 65559, 1769473, 9, 23, 1769473, 9, 393239, 1769473, 9, 917538, 65537, 3, 983074, 65537, 4, 1245218, 196609, 5, 917540, 327681, 3, 1310757, 327681, 7, 917542, 327681, 3, 917544, 327681, 3, 1310760, 589825, 7, 917546, 327681, 3, 1310763, 327681, 7, 917548, 327681, 3, 917550, 1114113, 3, 983086, 1114113, 4, 1245230, 983041, 5, 1179649, 1310721, 17, 1179652, 1310721, 17, 1179655, 1310721, 17, 1179658, 1310721, 17, 1179661, 1507329, 17, 1179664, 1114113, 17, 1179667, 1310721, 17, 1179670, 1114113, 17, 1179672, 2424833, 2, 262179, 2490369, 2)
+layer_2/tile_data = PackedInt32Array(-65521, 655362, 2, 196623, 786434, 5, -131066, 589826, 0, 196625, 851970, 1, 1310745, 65538, 2, 1376293, 655362, 2, 1835037, 786434, 5, 1703965, 786434, 1, 262184, 589826, 0, 30, 524290, 12)
+layer_3/tile_data = PackedInt32Array(393217, 2097153, 8, 393220, 2097153, 8, 393223, 2097153, 8, 393226, 2097153, 8, 458752, 1114113, 4, 393216, 1114113, 4, 393234, 2097153, 8, 393237, 2097153, 8, 393230, 2097153, 8, 1048598, 2097153, 8, 1048595, 2097153, 8, 1048592, 2097153, 8, 1048589, 2097153, 8, 1048586, 2097153, 8, 1048583, 2097153, 8, 1048580, 2097153, 8, 1048577, 2097153, 8, 1048576, 1114113, 4, 1114112, 1114113, 4)
+
+[node name="Player" parent="." index="1"]
+position = Vector2(20, 17)
+
+[node name="CanvasModulate" parent="." index="2"]
+visible = false
+
+[node name="Door" parent="." index="3"]
+animation = &"transform"
+dest_scene = "res://Levels/end_menu.tscn"
+
+[node name="Key" parent="." index="4"]
+z_index = 1
+position = Vector2(248, 7)
+
+[node name="Key2" parent="." index="5"]
+position = Vector2(808, 424)
+
+[node name="Key3" parent="." index="6"]
+position = Vector2(75, 353)
+
+[node name="Dog" parent="." index="8" instance=ExtResource("7_d5o3i")]
+position = Vector2(664, 423)
+
+[node name="Orc" parent="." index="9" instance=ExtResource("4_th4di")]
+position = Vector2(103, 210)
+
+[node name="Orc2" parent="." index="10" instance=ExtResource("4_th4di")]
+position = Vector2(180, 352)
+
+[node name="Battery" parent="." index="11" instance=ExtResource("4_xar7e")]
+position = Vector2(500, 28)
+
+[node name="Battery2" parent="." index="12" instance=ExtResource("4_xar7e")]
+position = Vector2(405, 326)
+
+[node name="Orc3" parent="." index="13" instance=ExtResource("4_th4di")]
+position = Vector2(478, 94)
+
+[node name="Orc4" parent="." index="14" instance=ExtResource("4_th4di")]
+position = Vector2(805, 292)
+
+[node name="Orc5" parent="." index="15" instance=ExtResource("4_th4di")]
+position = Vector2(693, 163)
+
+[node name="Battery3" parent="." index="16" instance=ExtResource("4_xar7e")]
+position = Vector2(794, 169)
+
+[node name="tutoDoor" parent="." index="17" instance=ExtResource("6_wtmad")]
+position = Vector2(231, 128)
+scale = Vector2(0.22, 0.3)
+
+[node name="OrcNote" parent="." index="18" node_paths=PackedStringArray("interface") instance=ExtResource("7_sw66j")]
+offset_left = 269.0
+offset_top = 45.0
+offset_right = 269.0
+offset_bottom = 45.0
+interface = NodePath("../CanvasLayer/note_interface_orc")
+
+[node name="DogNote" parent="." index="19" node_paths=PackedStringArray("interface") instance=ExtResource("7_sw66j")]
+offset_left = 471.0
+offset_top = 442.0
+offset_right = 471.0
+offset_bottom = 442.0
+number = 1
+interface = NodePath("../CanvasLayer/note_interface_dog")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="20"]
+visible = false
+
+[node name="note_interface_orc" parent="CanvasLayer" index="0" instance=ExtResource("7_t0ap0")]
+
+[node name="note_interface_dog" parent="CanvasLayer" index="1" instance=ExtResource("7_t0ap0")]
+
+[node name="TutoInterface" parent="CanvasLayer" index="2" node_paths=PackedStringArray("door", "player") instance=ExtResource("2_uxyax")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = -304.5
+offset_top = -135.0
+offset_right = 304.5
+grow_vertical = 0
+door = NodePath("../../tutoDoor")
+player = NodePath("../../Player")
+
+[node name="heal1" parent="." index="21" instance=ExtResource("10_fypjh")]
+position = Vector2(808, 354)
+
+[node name="heal2" parent="." index="22" instance=ExtResource("10_fypjh")]
+position = Vector2(477, 27)

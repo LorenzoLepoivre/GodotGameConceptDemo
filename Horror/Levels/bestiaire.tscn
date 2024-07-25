@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://boitxckqpescq"]
+
+[ext_resource type="Script" path="res://Scripts/Levels/bestiaire.gd" id="1_4dwc1"]
+[ext_resource type="Texture2D" uid="uid://o2ov4ao5bojw" path="res://Assets/Graphics/Bestiaire/orc_black.png" id="2_6n4g3"]
+[ext_resource type="Texture2D" uid="uid://b1f18wpbhkull" path="res://Assets/Graphics/Bestiaire/dog_black.png" id="3_4qbfg"]
+
+[node name="Bestiaire" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4dwc1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="OrcB" type="Button" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+icon = ExtResource("2_6n4g3")
+
+[node name="DogB" type="Button" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+icon = ExtResource("3_4qbfg")
+
+[node name="returnB" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "RETOUR"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/returnB" to="." method="_on_button_pressed"]
