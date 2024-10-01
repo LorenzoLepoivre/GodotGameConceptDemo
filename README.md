@@ -30,9 +30,6 @@ https://github.com/user-attachments/assets/e918fcb3-7f1a-4bac-98d4-a418ca7154cc
 - **Language**: GDScript
 - **Assets**: Reference in the doc file ASSET
 
-## Contributing
-If you would like to contribute to the project, please fork the repository and submit a pull request. All contributions are welcome!
-
 ## Contact
 For any questions or feedback, please contact us at [lorenzo.lepoivre@gmail.com].
 
