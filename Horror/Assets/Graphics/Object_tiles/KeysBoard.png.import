@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp7dxq0dj0coj"
-path="res://.godot/imported/Orc-Attack01.png-becde83538c94e767f9423fa04154f4f.ctex"
+uid="uid://bno85xvjs3f3w"
+path="res://.godot/imported/KeysBoard.png-69ea8c24f15482426bf53d9e3dcb3a02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/PNG_tiles/Orc/Orc/Orc-Attack01.png"
-dest_files=["res://.godot/imported/Orc-Attack01.png-becde83538c94e767f9423fa04154f4f.ctex"]
+source_file="res://Assets/Graphics/Object_tiles/KeysBoard.png"
+dest_files=["res://.godot/imported/KeysBoard.png-69ea8c24f15482426bf53d9e3dcb3a02.ctex"]
 
 [params]
 
